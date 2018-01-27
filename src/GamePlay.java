@@ -221,6 +221,11 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
         if (e.getKeyCode()==KeyEvent.VK_SPACE){
             moves = 0;
             score=0;
@@ -240,7 +245,6 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
             up = false;
             down = false;
         }
-        requestFocusInWindow();
         if (e.getKeyCode() == KeyEvent.VK_LEFT) {
             moves++;
             left = true;
@@ -253,7 +257,6 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
             up = false;
             down = false;
         }
-        requestFocusInWindow();
         if (e.getKeyCode() == KeyEvent.VK_UP) {
             moves++;
             up = true;
@@ -266,7 +269,6 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
             left = false;
             right = false;
         }
-        requestFocusInWindow();
         if (e.getKeyCode() == KeyEvent.VK_DOWN) {
             moves++;
             down = true;
@@ -281,10 +283,6 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         }
         requestFocusInWindow();
 
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
 
     }
 
